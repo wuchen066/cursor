@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web SSH 客户端</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="header">
+                <h1>🔐 Web SSH 连接</h1>
+                <p>安全连接到您的服务器</p>
+            </div>
+            
+            <form id="sshForm" class="ssh-form">
+                <div class="form-group">
+                    <input type="text" id="host" required>
+                    <label for="host">服务器地址</label>
+                    <span class="icon">🌐</span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" id="port" value="22" required>
+                    <label for="port">端口号</label>
+                    <span class="icon">🔢</span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" id="username" required>
+                    <label for="username">用户名</label>
+                    <span class="icon">👤</span>
+                </div>
+                
+                <div class="form-group">
+                    <input type="password" id="password" required>
+                    <label for="password">密码</label>
+                    <span class="icon">🔒</span>
+                </div>
+                
+                <button type="submit" class="connect-btn">
+                    <span class="btn-text">立即连接</span>
+                    <div class="loading-dots"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
