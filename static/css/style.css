@@ -70,7 +70,7 @@ body {
 
 .form-group input {
     width: 85%;
-    padding: 1rem 1rem 1rem 2.5rem;
+    padding: 1rem;
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     background: rgba(255, 255, 255, 0.05);
@@ -87,7 +87,7 @@ body {
 
 .form-group label {
     position: absolute;
-    left: 2.5rem;
+    left: 1rem;
     top: 1rem;
     color: #a0a7c2;
     pointer-events: none;
@@ -104,15 +104,8 @@ body {
     padding: 0 0.5rem;
 }
 
-.icon {
-    position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 1.2rem;
-}
-
 .connect-btn {
+    width: 93%;
     background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
     color: white;
     border: none;
@@ -144,6 +137,57 @@ body {
     }
     
     .form-group input {
-        padding-left: 2.2rem;
+        padding-left: 1rem;
     }
+}
+
+/* 添加批量输入框样式 */
+.batch-input {
+    margin-bottom: 2rem;
+}
+
+#batchInput {
+    width: 85%;
+    height: 120px;
+    padding: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    color: white;
+    font-family: monospace;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+#batchInput:focus {
+    outline: none;
+    border-color: var(--accent-color);
+}
+
+#parseStatus {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+}
+
+/* 添加错误提示样式 */
+.form-group.invalid label {
+    color: #ff4757 !important;
+}
+
+.form-group.invalid .icon {
+    color: #ff4757;
+}
+
+.error-message {
+    color: #ff4757;
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+    height: 1em;
+    transition: opacity 0.3s ease;
+}
+
+.form-group.invalid input {
+    border-color: #ff4757 !important;
+    box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.2) !important;
 } 

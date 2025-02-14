@@ -14,29 +14,30 @@
                 <p>安全连接到您的服务器</p>
             </div>
             
+            <div class="batch-input">
+                <textarea id="batchInput" placeholder="粘贴格式：IP:端口:用户名:密码&#10;示例：192.168.1.1:22:admin:password123"></textarea>
+                <div id="parseStatus"></div>
+            </div>
+            
             <form id="sshForm" class="ssh-form">
                 <div class="form-group">
                     <input type="text" id="host" required>
                     <label for="host">服务器地址</label>
-                    <span class="icon">🌐</span>
                 </div>
                 
                 <div class="form-group">
                     <input type="number" id="port" value="22" required>
                     <label for="port">端口号</label>
-                    <span class="icon">🔢</span>
                 </div>
                 
                 <div class="form-group">
                     <input type="text" id="username" required>
                     <label for="username">用户名</label>
-                    <span class="icon">👤</span>
                 </div>
                 
                 <div class="form-group">
                     <input type="password" id="password" required>
                     <label for="password">密码</label>
-                    <span class="icon">🔒</span>
                 </div>
                 
                 <button type="submit" class="connect-btn">
